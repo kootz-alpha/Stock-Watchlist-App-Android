@@ -1,3 +1,6 @@
+<h1>Alpha Trade</h1><br>
+<p>It is a stock market watchlist application. User can add certain stocks listed in the NYSE(New York Stock Exchange) into their watchlist and track the current price of those stocks. User can view the daily price movement for the past 50 days for each of those stocks, user can see a brief description of the stock. User can also set reminders to check on a particular stock at a certain time in future.</p>
+
 <h3>Output</h3>
 
 ![Splashscreen](img-github/0.png)<br>

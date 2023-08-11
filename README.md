@@ -19,10 +19,9 @@ Add-stock page<br><br>
 Stock details page<br><br>
 
 ![Navigation drawer](img-github/3.png)<br>
-Navigation drawer. Community hub is planned to be a global-chat discuss section, it isn't implemented yet.
+Navigation drawer. Community hub is planned to be a global-chat discuss section, it isn't implemented yet.<br><br>
 
-<br>
-***
+___
 <br>
 
 ## How to know which user is currently signed into the app in a device ?<br><br>
@@ -60,9 +59,8 @@ Handler().postDelayed({
     startActivity(startAppIntent, options.toBundle())
     finish()
 }, TIME_OUT)
-```
-<br>
---------------------------------------------------------------------------------------------------------------------
+```<br>
+___
 <br>
 
 ## How to login a user using Firebase Authentication ?<br><br>
@@ -97,7 +95,7 @@ auth.signInWithEmailAndPassword("$user_id@dummy.com", password) // Since this fu
             Toast.makeText(this, "Incorrect Id or Password", Toast.LENGTH_SHORT).show()
         }
     }
-```
-<br>
---------------------------------------------------------------------------------------------------------------------
+```<br>
+
+___
 <br>

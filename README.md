@@ -23,7 +23,8 @@ Navigation drawer. Community hub is planned to be a global-chat discuss section,
 
 <h3>How to know which user is currently signed into the app in a device ?</h3><br>
 We will store login-data locally. For this project I used shared preference. Data is of the form {bool loggedIn, userID}.<br>
-```
+<pre>
+```kotlin
 val loggedInSharedPreferences = getSharedPreferences("LoggedIn", Context.MODE_PRIVATE)
 
 if (!loggedInSharedPreferences.contains("login")) {
@@ -57,3 +58,4 @@ Handler().postDelayed({
     finish()
 }, TIME_OUT)
 ```
+</pre><br>

@@ -19,10 +19,10 @@ Add-stock page<br><br>
 Stock details page<br><br>
 
 ![Navigation drawer](img-github/3.png)<br>
-Navigation drawer. Community hub is planned to be a global-chat discuss section, it isn't implemented yet<br><br>
+Navigation drawer. Community hub is planned to be a global-chat discuss section, it isn't implemented yet.
 
 <br>
----
+***
 <br>
 
 ## How to know which user is currently signed into the app in a device ?<br><br>

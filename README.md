@@ -1,7 +1,7 @@
 # Alpha Trade<br>
 It is a stock market watchlist application. User can add certain stocks listed in the NYSE(New York Stock Exchange) into their watchlist and track the current price of those stocks. User can view the daily price movement for the past 50 days for each of those stocks, user can see a brief description of the stock. User can also set reminders to check on a particular stock at a certain time in future.<br><br>
 
-### Output<br>
+## Output<br>
 
 ![Splashscreen](img-github/0.png)<br>
 Splash screen<br><br>
@@ -21,7 +21,11 @@ Stock details page<br><br>
 ![Navigation drawer](img-github/3.png)<br>
 Navigation drawer. Community hub is planned to be a global-chat discuss section, it isn't implemented yet<br><br>
 
-### How to know which user is currently signed into the app in a device ?<br>
+<br><br>
+--------------------------------------------------------------------------------------------------------------------
+<br><br>
+
+## How to know which user is currently signed into the app in a device ?<br><br>
 We will store login-data locally. For this project I used shared preference. Data is of the form {bool loggedIn, userID}.<br>
 ```kotlin
 val loggedInSharedPreferences = getSharedPreferences("LoggedIn", Context.MODE_PRIVATE)

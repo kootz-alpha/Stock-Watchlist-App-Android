@@ -21,9 +21,9 @@ Stock details page<br><br>
 ![Navigation drawer](img-github/3.png)<br>
 Navigation drawer. Community hub is planned to be a global-chat discuss section, it isn't implemented yet<br><br>
 
-<br><br>
+<br>
 --------------------------------------------------------------------------------------------------------------------
-<br><br>
+<br>
 
 ## How to know which user is currently signed into the app in a device ?<br><br>
 We will store login-data locally. For this project I used shared preference. Data is of the form {bool loggedIn, userID}.<br>
@@ -61,4 +61,43 @@ Handler().postDelayed({
     finish()
 }, TIME_OUT)
 ```
+<br>
+--------------------------------------------------------------------------------------------------------------------
+<br>
+
+## How to login a user using Firebase Authentication ?<br><br>
+
+```kotlin
+var int = Intent(this,HomePage::class.java)
+
+val user_id = uname.text.toString() // uname refers to the textview for username in login page
+val password = pass.text.toString() // pass refers to the textview for password in login page
+
+val auth = FirebaseAuth.getInstance() // Creating an instance of Firebase Authentication
+auth.signInWithEmailAndPassword("$user_id@dummy.com", password) // Since this function allows login with email and password only, and as we have username instead of email. We pass in our username in the form of a dummy email
+    .addOnCompleteListener { task -> // As signInWithEmailAndPassword is an asynchronous function, we will have to do all our next steps inside a call-back function
+        if (task.isSuccessful) {
+            // User authentication successful
+            val user = auth.currentUser!!
+            val uid = user.uid
+
+            val loggedInSharedPreferences = getSharedPreferences("LoggedIn", Context.MODE_PRIVATE)
+            val loggedInData = loggedInSharedPreferences.getString("login", "")!!.split(", ").toMutableList()
+            loggedInData[0] = "true"
+            loggedInData[1] = uid
+
+            loggedInSharedPreferences.edit().putString("login", loggedInData.joinToString(", ")).apply()
+
+            int.putExtra("UserID", uid)
+            startActivity(int)
+            finish()
+
+        } else {
+            // User authentication failed
+            Toast.makeText(this, "Incorrect Id or Password", Toast.LENGTH_SHORT).show()
+        }
+    }
+```
+<br>
+--------------------------------------------------------------------------------------------------------------------
 <br>
